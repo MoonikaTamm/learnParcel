@@ -5,8 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel --port 1945 --open --no-source-maps --no-cache",
-    "build": "parcel build --no-source-maps --no-cache",
-    "deploy": "npm run build && surge ./dist learnparcelmt.surge.sh"
+    "build": "parcel build --no-source-maps --no-cache"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
@@ -15,8 +14,7 @@
     "bootstrap": "^5.3.3",
     "parcel": "^2.14.4",
     "parcel-namer-hashless": "^1.0.7",
-    "postcss": "^8.5.3",
-    "surge": "^0.24.6"
+    "postcss": "^8.5.3"
   },
   "postcss": {
     "plugins": {
