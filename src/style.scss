@@ -1,0 +1,44 @@
+@use 'sass:color';
+
+html {
+  font-family: system-ui;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+$bgcolor: rgb(46, 202, 245);
+
+$usless: red;
+$usless2: green;
+
+
+.fake_class {
+    background-color: $usless;
+} 
+
+#fake_id {
+    background-color: $usless2;
+} 
+
+
+body {
+    background-color: color.scale($bgcolor, $lightness: 60%) !important;
+}
+
+#cont {
+    margin: 1%;
+    text-align: center;
+}
+
+#alertbox {
+    width:300px; 
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    }
+
+
+

@@ -1,0 +1,38 @@
+{
+  "name": "parcel-vanilla-starter",
+  "private": true,
+  "version": "0.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel --port 1945 --open --no-source-maps --no-cache",
+    "build": "parcel build --no-source-maps --no-cache",
+    "deploy": "npm run build && surge ./dist learnparcelmt.surge.sh"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@parcel/transformer-sass": "^2.14.4",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "parcel": "^2.14.4",
+    "parcel-namer-hashless": "^1.0.7",
+    "postcss": "^8.5.3",
+    "surge": "^0.24.6"
+  },
+  "postcss": {
+    "plugins": {
+      "@fullhuman/postcss-purgecss": {
+        "content": [
+          "./src/**/*.html",
+          "./src/**/*.js"
+        ]
+      }
+    }
+  },
+  "parcel-namer-hashless": {
+    "include": [
+      ".js$",
+      ".css$"
+    ],
+    "mode": "development"
+  }
+}
